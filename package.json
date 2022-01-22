@@ -1,0 +1,14 @@
+{
+	"name": "wisptic",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"c": "sass -w scss:css"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"sass": "1.49.0"
+	}
+}
