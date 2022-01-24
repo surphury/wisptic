@@ -1,0 +1,24 @@
+.banner {
+	position: relative;
+	display: grid;
+	align-items: center;
+	background-image: url(../assets/nosotros.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	/* min-height: 10vh; */
+	aspect-ratio: 4 / 3;
+
+	&__title {
+		font-size: 4ch;
+		margin-inline-start: 2em;
+		color: #fff;
+		position: absolute;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.banner {
+		aspect-ratio: 4 / 1;
+	}
+}

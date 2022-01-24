@@ -1,0 +1,8 @@
+.section {
+	padding-inline: 2em;
+	&__image {
+		display: block;
+		margin-inline: auto;
+		width: min(100%, 100ch);
+	}
+}

@@ -1,0 +1,34 @@
+.card__container {
+	display: grid;
+	row-gap: 1em;
+}
+
+@media only screen and (min-width: 900px) {
+	.card__container {
+		justify-content: center;
+		grid-template-columns: repeat(2, minmax(20ch, 50ch));
+	}
+}
+
+.card {
+	--bg-colour: var(--primary-colour);
+	--colour: #fff;
+	padding: 2ch;
+	border-radius: 1ch;
+	color: var(--colour);
+	background-color: var(--bg-colour);
+
+	&--inverted {
+		--colour: var(--primary-colour);
+		--bg-colour: transparent;
+		border: 0.1ch solid var(--colour);
+	}
+
+	&:first-of-type {
+		border-top-left-radius: 4ch;
+	}
+
+	&:last-of-type {
+		border-bottom-right-radius: 4ch;
+	}
+}

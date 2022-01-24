@@ -1,0 +1,48 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-colour: #05448e;
+	--secondary-colour: #fece00;
+	--font: "Poppins", sans-serif;
+}
+
+body {
+	font-family: var(--font);
+	font-size: 15px;
+	margin: 0;
+}
+
+ul {
+	padding-left: 0;
+	margin-block: 0;
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	padding: 0;
+	border-width: 0;
+	background-color: transparent;
+}
+
+section {
+	margin-bottom: 50px;
+	.title-h2 {
+		text-align: center;
+		font-weight: 600;
+		font-size: 35px;
+		margin-bottom: 15px;
+	}
+}
