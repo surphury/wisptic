@@ -5,4 +5,17 @@
 		margin-inline: auto;
 		width: min(100%, 100ch);
 	}
+
+	&--connection {
+		padding-inline: 0;
+	}
+
+	&--pricing {
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 500;
+		font-size: 2.1875rem;
+	}
 }
