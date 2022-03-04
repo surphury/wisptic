@@ -1,0 +1,54 @@
+<section class="about-us">
+	<h2 class="about-us__title">¿Quiénes somos?</h2>
+	<div class="about-us__wrapper">
+		<div>
+			<p class="about-us__text">
+				Nos especializamos en llevar conectividad de internet a los lugares donde otros no
+				llegan, con más de 3 años de experiencia, somos una empresa conformada por un grupo
+				pequeño de personas enfocadas en servicios de telecomunicaciones para que tu y tu
+				familia tengan una vía de comunicación por medio de Internet, sintiéndonos orgullosos de
+				ser la primera y única empresa WISP (Proveedor de servicio de Internet Inalambrico) en
+				la comunidad.
+			</p>
+			<a href="#" class="about-us__link--button">Conocer más</a>
+		</div>
+		<img class="about-us__image" src="./assets/people.png" alt="people">
+	</div>
+</section>
+
+<style lang="scss">
+.about-us {
+	padding-inline: 2em;
+	
+	&__title {
+		font-size: 2rem;
+		text-align: center;
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 32px;
+		margin-bottom: 40px;
+		text-align: justify;
+	}
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		& > * {
+			flex-basis: 45%;
+			flex-grow: 1;
+		}
+		gap: 2em;
+	}
+	&__link--button {
+		border: 0.1ch solid var(--primary-colour);
+		padding: 1em 2em;
+		border-radius: 1ch;
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: var(--primary-colour);
+		background-color: #fff;
+	}
+}
+</style>

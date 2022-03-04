@@ -1,0 +1,97 @@
+<section class="section section--form">
+	<h2 class="section__title">¡No esperes más! <br> Internet hogar, Full fibra óptica</h2>
+	<div class="form__container">
+		<div class="form__wrapper">
+			<img src="assets/step1.svg" alt="Step 1" class="form__steps">
+			<form id="form" class="form">
+				<input placeholder="Nombres" type="text" id="name" name="name" class="form__input">
+				<input placeholder="Apellidos" type="text" id="surname" name="surname" class="form__input">
+				<select name="documentType" id="documentType" class="form__select">
+					<option value="0" selected disabled>Tipo de documento</option>
+				</select>
+				<input placeholder="Número de documento" type="text" id="document" name="document"
+					class="form__input">
+				<input placeholder="Celular" type="tel" id="phone" name="phone" class="form__input">
+				<input placeholder="Correo" type="email" id="email" name="phone" class="form__input">
+				<select name="internetPlan" id="internetPlan" class="form__select">
+					<option value="0" selected disabled>Plan de Internet</option>
+				</select>
+				<button class="form__button" type="submit">Siguiente</button>
+			</form>
+		</div>
+		<img src="assets/chica-saltando.png" alt="Chica saltando">
+	</div>
+</section>
+
+<style lang="scss">
+.section--form {
+	padding-inline: 0;
+	background-image: url(../assets/gray-wave.svg);
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+	.section__title {
+		font-size: 2.1875em;
+		text-align: center;
+	}
+}
+
+.form__container {
+	padding: 2em;
+	align-items: center;
+	justify-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5%;
+
+	& > * {
+		flex-basis: 40%;
+		flex-grow: 1;
+	}
+}
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em 2em;
+	justify-content: center;
+
+	& > * {
+		flex-grow: 1;
+		flex-basis: min(20ch, 100%);
+	}
+
+	& :last-child {
+		flex-basis: 100%;
+	}
+
+	&__input,
+	&__select {
+		border: 0.1ch solid var(--primary-colour);
+		font-size: 0.875rem;
+		padding: 1em;
+		border-radius: 1ch;
+	}
+
+	&__input {
+	}
+
+	&__select {
+	}
+
+	&__steps {
+		display: block;
+		margin-inline: auto;
+		margin-bottom: 4em;
+	}
+	&__button {
+		color: #fff;
+		background-color: var(--primary-colour);
+		font-size: 1rem;
+		font-weight: 500;
+		padding: 0.725em 4em;
+		border-radius: 1ch;
+		grid-column-start: span 2;
+		justify-self: center;
+	}
+}
+</style>

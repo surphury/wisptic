@@ -1,0 +1,154 @@
+---
+	import { Header } from '../components/Header';
+	import Footer from '../components/Footer.astro';
+	import Layout from '../components/Layout.astro';
+---
+<Layout>
+	<Header currentRoute='nosotros' client:load />
+	<main>
+		<section class="banner">
+			<h1 class="banner__title">Sobre Nosotros</h1>
+		</section>
+		<section class="section">
+			<h2 class="section__title">¿Quiénes somos?</h2>
+			<div class="about-us__wrapper">
+				<div>
+					<p class="about-us__text">
+						Nos especializamos en llevar conectividad de internet a los lugares donde otros no
+						llegan, con más de 3 años de experiencia, somos una empresa conformada por un grupo
+						pequeño de personas enfocadas en servicios de telecomunicaciones para que tu y tu
+						familia tengan una vía de comunicación por medio de Internet, sintiéndonos orgullosos de
+						ser la primera y única empresa WISP (Proveedor de servicio de Internet Inalambrico) en
+						la comunidad.
+					</p>
+					<a href="#" class="about-us__link--button">Conocer más</a>
+				</div>
+				<img class="about-us__image" src="./assets/people.png" alt="people">
+			</div>
+			<div class="card__container">
+				<div class="card">
+					<h3 class="card__title">Visión</h3>
+					<p class="card__text">
+						Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del
+						texto
+						de un sitio mientras
+						que mira su diseño.
+					</p>
+				</div>
+				<span></span>
+				<span></span>
+				<div class="card card--inverted">
+					<h3 class="card__title">Misión</h3>
+					<p class="card__text">
+						Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del
+						texto
+						de un sitio mientras
+						que mira su diseño.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer/>
+</Layout>
+
+<style lang="scss">
+.banner {
+	position: relative;
+	display: grid;
+	align-items: center;
+	background-image: url(../assets/nosotros.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	/* min-height: 10vh; */
+	aspect-ratio: 4 / 3;
+
+	&__title {
+		font-size: 4ch;
+		margin-inline-start: 2em;
+		color: #fff;
+		position: absolute;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.banner {
+		aspect-ratio: 4 / 1;
+	}
+}
+
+/* about */
+.about-us {
+	padding-inline: 2em;
+	
+	&__title {
+		font-size: 2rem;
+		text-align: center;
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 32px;
+		margin-bottom: 40px;
+		text-align: justify;
+	}
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		& > * {
+			flex-basis: 45%;
+			flex-grow: 1;
+		}
+		gap: 2em;
+	}
+	&__link--button {
+		border: 0.1ch solid var(--primary-colour);
+		padding: 1em 2em;
+		border-radius: 1ch;
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: var(--primary-colour);
+		background-color: #fff;
+	}
+}
+/* about */
+
+/* card */
+.card__container {
+	display: grid;
+	row-gap: 1em;
+}
+
+@media only screen and (min-width: 900px) {
+	.card__container {
+		justify-content: center;
+		grid-template-columns: repeat(2, minmax(20ch, 50ch));
+	}
+}
+
+.card {
+	--bg-colour: var(--primary-colour);
+	--colour: #fff;
+	padding: 2ch;
+	border-radius: 1ch;
+	color: var(--colour);
+	background-color: var(--bg-colour);
+
+	&--inverted {
+		--colour: var(--primary-colour);
+		--bg-colour: transparent;
+		border: 0.1ch solid var(--colour);
+	}
+
+	&:first-of-type {
+		border-top-left-radius: 4ch;
+	}
+
+	&:last-of-type {
+		border-bottom-right-radius: 4ch;
+	}
+}
+/* card */
+</style>

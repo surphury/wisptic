@@ -1,14 +1,18 @@
 {
-	"name": "wisptic",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"name": "@example/starter",
+	"version": "0.0.1",
+	"private": true,
 	"scripts": {
-		"c": "sass -w scss:css"
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview"
 	},
-	"author": "",
-	"license": "ISC",
+	"devDependencies": {
+		"astro": "0.23.1"
+	},
 	"dependencies": {
-		"sass": "1.49.0"
+		"nano-id": "1.1.0",
+		"swiper": "8.0.6"
 	}
 }

@@ -1,0 +1,42 @@
+<section class="availabality">
+	<div>
+		<h2 class="availabality__title">¡El Internet a tu alcance
+			<br/>de
+			<span class="availabality__hl">Fibra Óptica</span>
+			<br/>
+			<span class="availabality__hl">Wisptec Perú</span>
+			<br/>llegó a tu distrito!
+		</h2>
+		<a class="availabality__link--button" href="#">Registrate Aquí</a>
+	</div>
+	<img class="availabality__image" src="./assets/chica.png" alt="Girl">
+</section>
+
+<style lang="scss">
+.availabality {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
+	padding-bottom: 4em;
+	place-items: center;
+	row-gap: 2em;
+	background-image: url(../assets/wave.svg);
+	background-position-y: bottom;
+	background-repeat: no-repeat;
+	&__title {
+		font-size: 2.81rem;
+	}
+	&__link--button {
+		background-color: var(--primary-colour);
+		color: #fff;
+		padding: 1em 2em;
+		font-weight: 600;
+		border-radius: 0.5ch;
+	}
+	&__hl {
+		color: var(--primary-colour);
+		font-weight: 700;
+	}
+}
+</style>

@@ -1,0 +1,28 @@
+---
+	import { Header } from '../components/Header';
+	import Footer from '../components/Footer.astro';
+	import Layout from '../components/Layout.astro';
+	import Location from '../components/Location.astro';
+	import PlansList from '../components/PlansList.astro'
+---
+<Layout>
+	<Header currentRoute='fibra' client:load />
+	<main>
+		<div class="pricing">
+			<h1 class="title">Fibra Óptica Wisptec Perú</h1>
+			<p>La velocidad que siempre soñaste ahora es posible con el internter Fibra Óptica de Wisptec Perú</p>
+			<section class="section section--pricing">
+				<header class="section__header">
+					<h2 class="section__title">Solicita online tu Internet Hogar y tenlo ya!</h2>
+				</header>
+				<PlansList/>
+				<footer class="section__footer">
+					Incluye router ONT y los precios incluyen IGV. La instalación del
+					servicio tiene un costo de S/120 y lo puedes dividir hasta en 6 cuotas.
+				</footer>
+			</section>
+		</div>
+		<Location/>
+	</main>
+	<Footer/>
+</Layout>

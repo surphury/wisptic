@@ -1,0 +1,45 @@
+---
+	import { Header } from '../components/Header';
+	import Footer from '../components/Footer.astro';
+	import Layout from '../components/Layout.astro';
+	import Plans from '../components/Plans.astro';
+	import Form from '../components/Form.astro';
+---
+<Layout>
+	<Header currentRoute='planes' client:load />
+	<main>
+		<section class="section section--connection">
+			<img src="assets/conexion.png" alt="Familia navegando por internet">
+		</section>
+
+		<Plans/>
+		<Form/>
+
+		<section class="section section--planes">
+			<aside class="plans__aside">
+				<h2 class="plans__aside__title">El internet que mereces,<br> full fibra óptica</h2>
+				<a class="plans__aside__link" href="tel:+51910827075">Llámanos al 910 827 075</a>
+			</aside>
+			<h2 class="section__title">
+				<span class="hl-yellow">Beneficios</span>
+				de la Fibra <br> Óptica
+				<span class="hl-yellow">WISPTEC</span>
+			</h2>
+			<div class="benefits__list">
+				<div class="benefit__item">
+					<img src="./assets/icon/optical-fiber.png" alt="optical-fiber">
+					<h3 class="benefit__title">Tecnología 100% Fibra Óptica Pura</h3>
+				</div>
+				<div class="benefit__item">
+					<img src="./assets/icon/wifi.svg" alt="WIFI">
+					<h3 class="benefit__title">Datos ilimitados</h3>
+				</div>
+				<div class="benefit__item">
+					<img src="./assets/icon/simetrico.png" alt="simetrico">
+					<h3 class="benefit__title">Internet simétrico</h3>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer/>
+</Layout>

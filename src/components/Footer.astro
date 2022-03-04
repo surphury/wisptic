@@ -1,0 +1,105 @@
+<footer class="footer">
+		<div class="footer__wrapper">
+			<div>
+				<img class="footer__logo" src="./assets/logo.png" alt="Wisptic Perú">
+				<div class="footer__social-media">
+					<a href="#">
+						<img src="./assets/icon/facebook.png" alt="">
+					</a>
+					<a href="#">
+						<img src="./assets/icon/instagram.png" alt="">
+					</a>
+				</div>
+			</div>
+			<div>
+				<h3 class="footer__title">Atención de reclamos y solicitudes en línea</h3>
+				<ul class="footer__list">
+					<li class="footer__list-item">
+						<a class="footer__link" href="#">Atención de reclamos</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="footer__title">Tus derechos</h3>
+				<ul class="footer__list">
+					<li class="footer__list-item">
+						<a class="footer__link" href="#">Conoce tus derechos</a>
+					</li>
+					<li class="footer__list-item">
+						<a class="footer__link" href="#">Protección de datos</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="footer__title">Contacto</h3>
+				<ul class="footer__list">
+					<li class="footer__list-item">
+						<b>Dirección</b>
+						<p>Calle Javier Heraud N° 748 - Pueblo Joven Nocheto - Santa Anita</p>
+					</li>
+					<li class="footer__list-item">
+						<b>Horario de atención</b>
+						<p> Lunes a Viernes de 9:00 a 18:00 Sabado y domingo de 10:00 a 14:00</p>
+					</li>
+					<li class="footer__list-item">
+						<b>Email</b>
+						<p>soporte@wisptecperu.com</p>
+					</li>
+				</ul>
+			</div>
+			<div class="">
+				<div class="">
+					<p>Atención al cliente</p>
+					<a class=" footer__link--phone" href="#">910 827 075</a>
+				</div>
+			</div>
+		</div>
+		<p class="footer__copyright">Copyright © 2022 WISPTEC PERÚ <wbr/> Todos los derecho reservados.</p>
+</footer>
+
+<style lang="scss">
+	.footer {
+		&__wrapper {
+			display: grid;
+			gap: 2em;
+			grid-template-columns: repeat(auto-fit, minmax(auto, 35ch));
+			justify-content: center;
+
+			& :last-child {
+				justify-self: center;
+			}
+		}
+		&__list {
+			list-style-type: disc;
+			list-style-position: inside;
+			padding-left: 0;
+			& ::marker {
+				/* font-size: 2ch; */
+				color: var(--primary-colour);
+			}
+		}
+		&__copyright {
+			padding-block: 1em;
+			margin-block: 0;
+			font-size: 0.875rem;
+			text-align: center;
+			font-weight: 600;
+			color: #fff;
+			background-color: var(--primary-colour);
+		}
+		&__link {
+			&--phone {
+				padding: 0.5em 1em;
+				font-weight: 600;
+				font-size: 2.5ch;
+				color: #fff;
+				background-color: var(--primary-colour);
+				border-radius: 1ch;
+			}
+		}
+		&__title {
+			font-weight: 700;
+			color: var(--primary-colour);
+		}
+	}
+</style>

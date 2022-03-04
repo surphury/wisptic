@@ -1,0 +1,21 @@
+---
+	import { Header } from '../components/Header';
+	import Footer from '../components/Footer.astro';
+	import Layout from '../components/Layout.astro';
+	import { Slider } from '../components/Slider';
+	import About from '../components/About.astro';
+	import Planes from '../components/Planes.astro';
+	import Availabality from '../components/Availabality.astro';
+	import Benefits from '../components/Benefits.astro';
+---
+<Layout>
+	<Header currentRoute='/' client:load />
+	<main>
+		<Slider client:load />
+		<Planes/>
+		<Benefits/>
+		<About/>
+		<Availabality/>
+	</main>
+	<Footer/>
+</Layout>

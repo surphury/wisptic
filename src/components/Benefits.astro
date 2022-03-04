@@ -1,0 +1,45 @@
+<section class="benefits">
+	<img class="benefits__image" src="./assets/man.png" alt="man using computer">
+	<div class="benefits__info">
+		<h2 class="benefits__title">!Disfruta de nuestros beneficios!</h2>
+		<ul class="benefits__list">
+			<li class="benefit__item">
+				<img src="./assets/icon/optical-fiber.png" alt="optical-fiber">
+				<p>Tecnología 100% Fibra Óptica Pura</p>
+			</li>
+			<li class="benefit__item">
+				<img src="./assets/icon/wifi.svg" alt="WIFI">
+				<p>Datos ilimitados</p>
+			</li>
+			<li class="benefit__item">
+				<img src="./assets/icon/simetrico.png" alt="simetrico">
+				<p>Internet simétrico</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<style lang="scss">
+.benefit {
+	&__item {
+		text-align: center;
+	}
+	&__title {
+		color: var(--primary-colour);
+	}
+}
+
+.benefits {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 15ch);
+		justify-content: space-evenly;
+		justify-items: center;
+		gap: 2em;
+	}
+}
+</style>

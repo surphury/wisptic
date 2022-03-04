@@ -1,0 +1,38 @@
+---
+	import PlansList from '../components/PlansList.astro';
+---
+<section class="section section--plans plans">
+	<h2 class="plans__title">Solicita online tu <b>Internet Hogar</b> y tenlo ya!</h2>
+	<div class="separator"></div>
+	<PlansList/>
+	<div class="plans__terms">
+		<p>Incluye router ONT y los precios incluyen IGV.
+			La instalación del servicio tiene un costo de S/120 y lo puedes dividir hasta en 6 cuotas.
+		</p>
+	</div>
+</section>
+
+<style lang="scss">
+.section--plans {
+	padding-bottom: 3em;
+}
+
+.plans__aside {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em;
+	border-radius: 1ch;
+	background-color: var(--primary-colour);
+	&__title {
+		color: #fff;
+	}
+	&__link {
+		font-weight: 700;
+		border-radius: 0.5ch;
+		padding: 1em;
+		color: var(--primary-colour);
+		background-color: #fff;
+	}
+}
+</style>

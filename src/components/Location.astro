@@ -1,0 +1,48 @@
+<section class="section section--location location">
+	<h2 class="location__title">Cobertura en Santa Anita</h2>
+	<div class="location__container">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6340.662666713962!2d-76.97194506776806!3d-12.04721884579205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68077e654bd%3A0x6e675be6cf829d41!2sSanta%20Anita%2C%20Peru!5e1!3m2!1sen!2sve!4v1644163570946!5m2!1sen!2sve"
+			width="600" height="450" class="location__map" allowfullscreen="" loading="lazy">
+		</iframe>
+		<ul class="location__list">
+			<li class="location__item">Internet fibra óptica Perales</li>
+			<li class="location__item">Internet fibra óptica Ficus</li>
+			<li class="location__item">Internet fibra óptica Nocheto</li>
+			<li class="location__item">Internet fibra óptica Huascar</li>
+			<li class="location__item">Internet fibra óptica Universal</li>
+		</ul>
+	</div>
+</section>
+<style lang="scss">
+.location {
+	background-color: var(--primary-colour);
+	color: #fff;
+	padding-block: 2em;
+
+	&__map {
+		border-width: 0;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2em;
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 500;
+		font-size: 2.1875rem;
+	}
+
+	&__list {
+		padding-left: 2em;
+		list-style-image: url(../assets/icon/geo.svg);
+		& > * + * {
+			margin-top: 1em;
+		}
+	}
+}
+</style>

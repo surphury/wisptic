@@ -28,17 +28,28 @@
 		text-align: center;
 	}
 	&__list {
-		display: grid;
+		/* display: grid;
 		place-content: center;
-		grid-template-columns: repeat(auto-fill, minmax(26ch, 40ch));
+		grid-template-columns: repeat(, minmax(26ch, 40ch));
 		justify-items: center;
 		gap: 2em;
-		margin-bottom: 3ch;
+		margin-bottom: 3ch; */
+		overflow: hidden;
+		max-width: 100%;
 	}
 	&__terms {
 		font-weight: 300;
 		/* font-size: 15px; */
 		text-align: center;
+	}
+
+	&__container {
+		display: flex;
+		column-gap: 2em;
+
+		& > * {
+			flex-basis: min(min(33%, minmax(26ch, 40ch)), 100%);
+		}
 	}
 }
 

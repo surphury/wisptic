@@ -54,11 +54,11 @@
 }
 
 /* @media only screen and (-width: 900px) {
-	.header {
-		&__navbar {
-		}
+		.header {
+			& __navbar {
 	}
-} */
+		}
+	} */
 
 @media only screen and (min-width: 900px) {
 	.header {
