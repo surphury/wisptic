@@ -1,12 +1,12 @@
 ---
-	import { Header } from '../components/Header';
+	import Header from '../components/Header.astro';
 	import Footer from '../components/Footer.astro';
 	import Layout from '../components/Layout.astro';
 	import Plans from '../components/Plans.astro';
 	import Form from '../components/Form.astro';
 ---
 <Layout>
-	<Header currentRoute='planes' client:load />
+	<Header currentRoute="planes" client:load />
 	<main>
 		<section class="section section--connection">
 			<img src="assets/conexion.png" alt="Familia navegando por internet">
@@ -27,15 +27,15 @@
 			</h2>
 			<div class="benefits__list">
 				<div class="benefit__item">
-					<img src="./assets/icon/optical-fiber.png" alt="optical-fiber">
+					<img src="./assets/icon/optical-fiber.png" alt="optical-fiber"/>
 					<h3 class="benefit__title">Tecnología 100% Fibra Óptica Pura</h3>
 				</div>
 				<div class="benefit__item">
-					<img src="./assets/icon/wifi.svg" alt="WIFI">
+					<img src="./assets/icon/wifi.svg" alt="WIFI"/>
 					<h3 class="benefit__title">Datos ilimitados</h3>
 				</div>
 				<div class="benefit__item">
-					<img src="./assets/icon/simetrico.png" alt="simetrico">
+					<img src="./assets/icon/simetrico.png" alt="simetrico"/>
 					<h3 class="benefit__title">Internet simétrico</h3>
 				</div>
 			</div>

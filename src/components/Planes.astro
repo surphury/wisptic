@@ -13,26 +13,35 @@
 </section>
 
 <style lang="scss">
-.section--plans {
-	padding-bottom: 3em;
-}
+	.plans {
+		&__title {
+			margin-block: 3ch;
+			font-weight: 400;
+			font-size: 2.18rem;
+			text-align: center;
+		}
 
-.plans__aside {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1em 2em;
-	border-radius: 1ch;
-	background-color: var(--primary-colour);
-	&__title {
-		color: #fff;
+		&__aside {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1em 2em;
+			border-radius: 1ch;
+			background-color: var(--primary-colour);
+			&__title {
+				color: #fff;
+			}
+			&__link {
+				font-weight: 700;
+				border-radius: 0.5ch;
+				padding: 1em;
+				color: var(--primary-colour);
+				background-color: #fff;
+			}
+		}
 	}
-	&__link {
-		font-weight: 700;
-		border-radius: 0.5ch;
-		padding: 1em;
-		color: var(--primary-colour);
-		background-color: #fff;
+
+	.section--plans {
+		padding-bottom: 3em;
 	}
-}
 </style>

@@ -1,0 +1,49 @@
+---
+	const routes = [
+		{ route: '/', name: 'Inicio' },
+		{ route: 'nosotros', name: 'Nosotros' },
+		{ route: 'planes', name: 'planes' },
+		{ route: 'fibra', name: 'Fibra Optica' },
+		{ contacto: 'contacto', name: 'Contacto' }
+	];
+	const currentRoute = Astro.props.currentRoute ?? '/';
+---
+
+<header class="header">
+	<img class="header__logo" src="./assets/logo.png" alt="Wisptic Perú" />
+
+	<button id="headerButton" class="header__menu"></button>
+
+	<nav class="header__navbar">
+		<ul class="header__list">
+			{routes.map(({ route, name }) => (
+				<li>
+					<a class={`header__link${(currentRoute === route) ? "header__link--active" : ""}`} href={route}>{name}</a>
+				</li>
+				))}
+			<li>
+				<a href="tel:+51910827075" class="header__link--phone">
+					<i class="fas fa-phone-alt header__icon"></i>
+					910-827-075
+				</a>
+			</li>
+			<li>
+				<a href="#" class="header__link--button">
+					<i class="far fa-user"></i>
+					Mi cuenta
+				</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<script>
+	const $headerButton = document.getElementById('headerButton');
+	$headerButton.addEventListener('click',() => {
+		document.querySelector('.header__navbar').classList.toggle("header__navbar--hidden")
+	});
+</script>
+
+<style lang="scss">
+	@import 'src/styles/header.scss';
+</style>

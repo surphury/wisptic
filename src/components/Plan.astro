@@ -1,0 +1,109 @@
+---
+const {
+	name = "Wisptec Premium",
+	velocity,
+	type = "Internet Hogar",
+	price
+} = Astro.props.data;
+---
+<div class="plan">
+	<p class="plan__name">Wisptec Premium</p>
+	<p class="plan__velocity">
+		<span>{velocity}</span> Mbps
+	</p>
+	<p class="plan__type">Internet Hogar</p>
+	<p class="plan__price">Precio <span>s/{price}</span> al mes</p>
+	<div class="plan__features">
+		<div>
+			<img src="./assets/icon/optical-fiber.png" alt=""/>
+			<p>100% fibra óptica</p>
+		</div>
+		<div>
+			<img src="./assets/icon/wifi.svg" alt=""/>
+			<p>Internet <b>Ilimitado</b> y <b>alta frecuencia</b></p>
+		</div>
+		<div>
+			<img src="./assets/icon/modem.png" alt=""/>
+			<p>Modem WIFI</p>
+		</div>
+	</div>
+	<div class="plan__other-info">
+		<p><i class="fas fa-check"></i> Equipos de préstamo</p>
+		<p><i class="fas fa-check"></i> Consulta la cobertura <a href="#">AQUÍ</a></p>
+	</div>
+	<a href="#" class="plan__hire">CONTRATAR</a>
+</div>
+
+<style lang="scss">
+	.plan {
+		border: 0.2ch solid #cccccc;
+		border-radius: 0.5ch;
+		padding: 2em;
+		background-color: #fff;
+		&__name {
+			color: #777777;
+			font-size: 1.56em;
+			font-weight: 600;
+			text-align: center;
+		}
+		&__velocity {
+			color: var(--primary-colour);
+			font-size: 1.875em;
+			font-weight: 700;
+			text-align: center;
+			span {
+				font-size: 2.8em;
+			}
+		}
+		&__type {
+			color: #777777;
+			font-weight: 600;
+			font-size: 1em;
+			text-align: center;
+			margin-top: -11px;
+		}
+		&__price {
+			font-size: 20px;
+			font-weight: 400;
+			color: #505050;
+			text-align: center;
+			margin-block: 1ch 2ch;
+			span {
+				font-weight: 700;
+				font-size: 2em;
+			}
+		}
+		&__features {
+			color: #000;
+			font-size: 15px;
+			font-weight: 300;
+			border-bottom: 1px solid #cccccc;
+			padding-bottom: 14px;
+			div {
+				display: flex;
+				align-items: center;
+				img {
+					width: 40px;
+					margin-right: 10px;
+				}
+			}
+		}
+		&__other-info {
+			color: var(--primary-colour);
+			padding: 20px 0;
+			a {
+				text-decoration: underline;
+				color: var(--primary-colour);
+			}
+		}
+		&__hire {
+			background-color: var(--primary-colour);
+			color: #fff;
+			padding: 1em 3.3em;
+			display: block;
+			text-align: center;
+			border-radius: 1ch;
+			margin-inline: auto;
+		}
+	}
+</style>
