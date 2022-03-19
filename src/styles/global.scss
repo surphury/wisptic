@@ -1,0 +1,183 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-colour: #05448e;
+	--secondary-colour: #fece00;
+	--font: "Poppins", sans-serif;
+	font-size: clamp(1.6rem, 0.4vw + 1.2rem, 1.8rem);
+}
+
+body {
+	font-family: var(--font);
+	/* font-size: 0.9375rem; */
+	margin: 0;
+}
+
+ul {
+	padding-left: 0;
+	margin-block: 0;
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	padding: 0;
+	border-width: 0;
+	background-color: transparent;
+}
+
+section {
+	margin-bottom: 50px;
+	.title-h2 {
+		text-align: center;
+		font-weight: 600;
+		font-size: 35px;
+		margin-bottom: 15px;
+	}
+}
+
+.section {
+	padding-inline: 2em;
+	&__image {
+		display: block;
+		margin-inline: auto;
+		width: min(100%, 100ch);
+	}
+
+	&--connection {
+		padding-inline: 0;
+	}
+
+	&--pricing {
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 500;
+		font-size: 2.1875rem;
+	}
+}
+
+.how-work {
+	figure {
+		width: 80%;
+		margin: 0 auto;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.title {
+	font-size: 2.5rem;
+}
+
+.pricing {
+	background-color: var(--primary-colour);
+	color: #fff;
+	text-align: center;
+	padding-block: 2em;
+}
+
+.hl-yellow {
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		background-color: #fece00;
+		z-index: -1;
+		height: 0.5em;
+		width: 100%;
+		display: inline-block;
+		bottom: 0;
+	}
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	/* display: block;
+				width: 100%;
+				height: 100%; */
+	object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+	background-color: transparent;
+	border: 3px solid #cccccc;
+	width: 12px;
+	height: 12px;
+}
+.swiper-pagination-bullet-active {
+	background-color: #cccccc;
+}
+
+.separator {
+	padding-block-end: 3em;
+	&::before {
+		content: "";
+		display: block;
+		margin-inline: auto;
+		border-bottom: 0.3ch solid var(--primary-colour);
+		width: 50%;
+	}
+}
+
+.indicators {
+	.container {
+		height: 100%;
+		.indicators__left {
+			position: relative;
+			width: 40%;
+			height: 100%;
+			h2 {
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 35px;
+				width: 70%;
+				position: absolute;
+				top: 8%;
+				left: 12%;
+				span {
+					color: var(--secondary-colour);
+					font-size: 38px;
+				}
+			}
+			figure {
+				width: 90%;
+				position: absolute;
+				bottom: 0;
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
